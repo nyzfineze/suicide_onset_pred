@@ -1,0 +1,49 @@
+<!-- Model HTML page
+     This page contains the inputs from the end user. The inputs are then fed into the app.py in order to run a prediction 
+     
+-->
+
+{% extends "base.html" %}
+{% block title %}Home Page{% endblock %}
+{% block content %}
+    <center>
+
+    <h1> Suicide Onset Prediction Model </h1><br>
+    <img style = "max-width: 20%; height: auto;" src='static\risk_logo.jpg'>
+    </center> 
+
+    <h3>The following questions are True or False questions. Please enter 1 if true or 0 if false</h3>
+
+     <p></p> 
+    
+    <form method="POST", action="{{url_for('prediction')}}">
+       <b> Never thought you had a problem with mental health :  <input type="number", name='a', placeholder="1 if True or 0 if False"> <br><br>
+        During the past 30 days, never felt hopeless? :  <input type="number", name='b', placeholder="1 if True or 0 if False"> <br><br>
+        During the past 30 days, felt down on yourself, no good, or worthless most of the time? :  <input type="number", name='c', placeholder="1 if True or 0 if False"> <br><br>
+        During the past 30 days, felt down on yourself, no good, or worthless all of the time? : <input type="number", name='d', placeholder="1 if True or 0 if False"> <br><br>
+        When you were at your worst emotionally, you felt down on yourself, no good, or worthless all of the time? : <input type="number", name='e', placeholder="1 if True or 0 if False"> <br><br>
+        During the past 30 days, never felt that nothing could cheer you up when feeling sad or depressed? : <input type="number", name='f', placeholder="1 if True or 0 if False"> <br><br>
+        When you were at your worst emotionally, you never felt hopeless? : <input type="number", name='g', placeholder="1 if True or 0 if False"> <br><br>
+        During the past 30 days, felt hopeless all the time?  : <input type="number", name='h', placeholder="1 if True or 0 if False"> <br><br>
+        When you were at your worst emotionally, you felt hopeless most of the time? : <input type="number", name='i', placeholder="1 if True or 0 if False"> <br><br>
+        When you were at your worst emotionally, everything was an effort all the time? : <input type="number", name='j', placeholder="1 if True or 0 if False"> <br><br>
+        During the past 30 days, felt down on yourself, no good, or worthless some of the time? : <input type="number", name='k', placeholder="1 if True or 0 if False"> <br><br>
+        When you were at your worst emotionally, you felt down on yourself, no good, or worthless some of the time? : <input type="number", name='l', placeholder="1 if True or 0 if False"> <br><br>
+        When you were at your worst emotionally, felt that nothing could cheer you up when feeling sad or depressed all of the time? : <input type="number", name='m', placeholder="1 if True or 0 if False"> <br><br>
+        During the past 12 months, had difficulty with daily activities, work responsibilites, or household responsibilities everyday due to emotions or mental health?   : <input type="number", name='n', placeholder="1 if True or 0 if False"> <br><br>
+        
+        
+        
+        
+        
+        
+        
+        
+        <br></b>
+        <input type="submit" , value='predict!' >
+    </form> 
+    
+    
+    
+{% endblock %}
+

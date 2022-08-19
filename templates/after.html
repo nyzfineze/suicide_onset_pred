@@ -1,0 +1,45 @@
+    
+    <!-- Prediction page
+         decided to keep this page as after due to the page only being visible after a prediction is made from the model page
+         Prediction either tells the user they are at risk or they are not at risk
+    
+    -->
+
+    {% extends "base.html" %}
+    {% block title %}Home Page{% endblock %}
+    {% block content %}
+
+    <center>
+
+    <h1>  PREDICTION :  </h1>
+    
+    {%if data == 0%}
+    <h1>You Are At Risk!</h1>
+    <img style = "max-width: 20%; height: auto;" src='static\risk.jpg'>  
+
+    <p> You are not alone! You <strong><em>MATTER!</em></strong> Please call the number below: </p>
+    <img style = "max-width: 20%; height: auto;" src='static\prevention.jpg'>  
+
+    {%else%}
+    <h1>You Are Not At Risk!</h1>
+    <img style = "max-width: 20%; height: auto;"" src='static\help.png'>
+
+    <p> Although you may not be struggling, your close ones might be. Don't forget to reach out </p>
+    
+    {%endif%}
+
+        <br><br>
+    <a href='/model'>Return to prediction page</a>
+
+
+    
+    </center>
+
+{% endblock %}
+
+
+
+
+
+
+
